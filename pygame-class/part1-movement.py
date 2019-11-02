@@ -12,10 +12,6 @@ height = 60  # hoch
 vel = 5 # geschwindigkeit
 run = True # laufen
 
-screen.fill((255, 255, 255))
-pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
-pygame.display.update() # actualizieren
-
 
 while run: # endloss schleife (wiederholung)
     pygame.time.delay(100) # verspetung
@@ -38,4 +34,4 @@ while run: # endloss schleife (wiederholung)
     pygame.display.update()
 
 
-pygame.quit() # bendet
+pygame.quit() # beenden

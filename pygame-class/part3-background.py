@@ -4,7 +4,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((500, 480))
 pygame.display.set_caption("My first game")
-bg = pygame.image.load('resources/bg2.png')
+bg = pygame.image.load('resources/bg.jpg')
 hero = pygame.image.load('resources/R1.png')
 
 
@@ -17,12 +17,6 @@ run = True
 isJump = False
 jumpHight = 8
 jumpCount = jumpHight
-
-bgX = 0
-
-screen.fill((255, 255, 255))
-pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
-pygame.display.update()
 
 while run:
     pygame.time.delay(10)
@@ -50,9 +44,7 @@ while run:
             jumpCount = jumpHight
 
     screen.fill((255, 255, 255))
-    screen.blit(pygame.transform.scale(bg, (500, 520)) , (bgX, 0))
-    screen.blit(pygame.transform.scale(bg, (500, 520)) , (bgX + 220,0))
-    bgX -= 1
+    screen.blit(bg, (0, 0))
     screen.blit(hero, (x, y))
     pygame.display.update()
 

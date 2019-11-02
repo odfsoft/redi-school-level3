@@ -14,9 +14,6 @@ run = True
 isJump = False
 jumpCount = 10
 
-screen.fill((255, 255, 255))
-pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
-pygame.display.update()
 
 while run:
     pygame.time.delay(10)
