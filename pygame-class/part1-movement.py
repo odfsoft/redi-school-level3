@@ -16,6 +16,7 @@ screen.fill((255, 255, 255))
 pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
 pygame.display.update()
 
+
 while run:
     pygame.time.delay(100)
     for event in  pygame.event.get():
@@ -28,9 +29,9 @@ while run:
     if keys[pygame.K_LEFT]:
         x -= vel
     if keys[pygame.K_UP]:
-        y += vel
-    if keys[pygame.K_DOWN]:
         y -= vel
+    if keys[pygame.K_DOWN]:
+        y += vel
 
     screen.fill((255, 255, 255))
     pygame.draw.rect(screen, (255, 0, 0), (x, y, width, height))
